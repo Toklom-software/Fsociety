@@ -1,0 +1,112 @@
+body {
+    font-family: 'Consolas', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #00ff99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-shadow: 0 0 4px rgba(0, 255, 153, 0.8);
+}
+
+.container {
+    max-width: 800px;
+    background: #101010;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.2);
+    border: 1px solid #00ff99;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    font-size: 26px;
+    color: #00ff99;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 6px rgba(0, 255, 153, 0.8);
+}
+
+h2 {
+    font-size: 20px;
+    color: #00cc77;
+    border-left: 3px solid #00ff99;
+    padding-left: 12px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #99ffcc;
+}
+
+.date {
+    text-align: center;
+    font-size: 14px;
+    color: #66ffcc;
+    margin-bottom: 20px;
+}
+
+.section {
+    background: #161616;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.15);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #00cc77;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #66ffcc;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer a:hover {
+    color: #00cc77;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cursor::after {
+    content: "|";
+    animation: blink 1s infinite;
+    color: #00ff99;
+}
